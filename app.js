@@ -207,7 +207,7 @@ async function endGame() {
   game.running = false;
   updateMsg.textContent = `Juego terminado. Puntaje: ${game.score}`;
   try {
-    await apiUpdateScore(game.score);                                                                                    me.score);
+    await apiUpdateScore(game.score);
     await loadLeaderboard();
   } catch (err) {
     updateMsg.textContent = "Error al guardar puntaje.";
