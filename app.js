@@ -1,4 +1,5 @@
 import { auth, db } from "./firebase.js";
+await set(ref(db, "testConnection"), { mensaje: "Firebase conectado correctamente ✅" });
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,7 +8,7 @@ import {
   onAuthStateChanged,
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
 import {
-  ref, set, update, get, child, query, orderByChild
+  ref, set, get, child, query, orderByChild
 } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
 /* --------- Elementos --------- */
@@ -191,9 +192,9 @@ function update() {
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.fillStyle = "#eef3f8"; ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#0077cc";
+  ctx.fillStyle = "#0077cc";       
   game.balls.forEach(b => { ctx.beginPath(); ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2); ctx.fill(); });
-  ctx.fillStyle = "#444"; ctx.fillRect(game.playerX - 25, canvas.height - 30, 50, 12);
+  ctx.fillStyle = "#444"; ctx.fillRect(                                                              game.playerX - 25, canvas.height - 30, 50, 12);
 }
 
 document.addEventListener("keydown", (e) => {
@@ -206,7 +207,7 @@ async function endGame() {
   game.running = false;
   updateMsg.textContent = `Juego terminado. Puntaje: ${game.score}`;
   try {
-    await apiUpdateScore(game.score);
+    await apiUpdateScore(game.score);                                                                                    me.score);
     await loadLeaderboard();
   } catch (err) {
     updateMsg.textContent = "Error al guardar puntaje.";
