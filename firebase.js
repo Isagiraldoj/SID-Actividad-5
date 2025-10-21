@@ -5,7 +5,7 @@ import { getDatabase }  from "https://www.gstatic.com/firebasejs/10.12.4/firebas
 const firebaseConfig = {
   apiKey: "AIzaSyBPJ_AFAJTnI0_ffTNz3x6WeOPZcojAlcY",
   authDomain: "pruebasid-isabelagiraldo.firebaseapp.com",
-  databaseURL: "https://pruebasid-isabelagiraldo-default-rdb.firebaseio.com",
+  databaseURL: "https://pruebasid-isabelagiraldo-default-rtdb.firebaseio.com",
   projectId: "pruebasid-isabelagiraldo",
   storageBucket: "pruebasid-isabelagiraldo.firebasestorage.app",
   messagingSenderId: "190894139049",

@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CyberAim - Juego de Puntería</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actividad 5 – Isabela Giraldo</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="header">
-    <h1>CyberAim Pro</h1>
-    <p class="byline">Desarrollado por Isabela Giraldo</p>
+    <h1>Actividad 5 – Isabela Giraldo</h1>
+    <p class="byline">Firebase Serverless App</p>
   </header>
 
   <!-- Login / Registro -->
   <div id="loginContainer" class="login-container">
     <form id="authForm">
       <input placeholder="Correo electrónico" id="usernameInput" autocomplete="username" />
-      <input placeholder="Contraseña (mínimo 6 caracteres)" id="passwordInput" type="password" autocomplete="current-password"/>
+      <input placeholder="Contraseña (mínimo 6)" id="passwordInput" type="password" autocomplete="current-password" />
       <div class="row">
-        <button id="loginButton">Iniciar Sesión</button>
+        <button id="loginButton">Ingresar</button>
         <button id="registerButton" type="button" class="secondary">Registrarse</button>
       </div>
       <button id="resetPwdButton" type="button" class="linklike">¿Olvidaste tu contraseña?</button>
@@ -27,52 +27,39 @@
     </form>
   </div>
 
-  <!-- App Principal -->
+  <!-- App -->
   <section id="appSection" class="card hidden">
     <div class="row space">
-      <h2 id="welcome">Bienvenida, </h2>
-      <button id="logoutButton" class="danger">Cerrar Sesión</button>
+      <h2 id="welcome">Hola, </h2>
+      <button id="logoutButton" class="danger">Cerrar sesión</button>
     </div>
 
-       <!-- Juego -->
-    <div class="card">
-      <h3>🎮 Triki Rápido (vs IA)</h3>
+    <!-- Juego + Leaderboard -->
+    <div class="game-card">
+      <h3>Minijuego Catcher + Leaderboard</h3>
 
       <div class="game-wrap">
         <canvas id="gameCanvas"></canvas>
       </div>
 
-      <!-- HUD debajo del juego -->
-      <div id="hud" class="hud hud--below">
-        <div><b>Tiempo</b> <span id="hudTime">0.0</span>s</div>
-        <div><b>Victorias</b> <span id="hudHits">0</span></div>
-        <div><b>Movimientos</b> <span id="hudShots">0</span></div>
-        <div><b>Eficiencia</b> <span id="hudAcc">0%</span></div>
-        <div><b>Puntaje</b> <span id="hudScore">0</span></div>
+      <div class="hud">
+        <div><b>Tiempo:</b> <span id="hudTime">0.0</span>s</div>
+        <div><b>Puntaje:</b> <span id="hudScore">0</span></div>
       </div>
 
       <div class="row gap" style="margin-top:10px">
-        <button id="btnStart">🎯 Nueva Partida</button>
+        <button id="btnStart">Iniciar juego</button>
       </div>
 
-      <p class="msg">Eres las <strong style="color:#ef4444">X</strong> - Haz clic en una casilla para jugar. Gana más puntos terminando rápido.</p>
+      <p class="msg">Usa las flechas ← y → para atrapar los círculos. Tienes 15 segundos.</p>
       <p id="updateMsg" class="msg"></p>
-    </div>
 
-    <!-- Tabla de Clasificación -->
-    <div class="card">
+      <h3>Tabla de Puntajes</h3>
       <div class="row space">
-        <h3>🏆 Tabla de Clasificación</h3>
-        <button id="btnRefresh">🔄 Actualizar</button>
+        <button id="btnRefresh">Refrescar</button>
       </div>
       <table class="table">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Usuario</th>
-            <th>Puntaje</th>
-          </tr>
-        </thead>
+        <thead><tr><th>#</th><th>Usuario</th><th>Puntaje</th></tr></thead>
         <tbody id="tblBody"></tbody>
       </table>
       <p id="listMsg" class="msg"></p>
