@@ -3,7 +3,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-aut
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPJ_AFAJTnI0_ffTNz3x6WeOPZcojAlcY",
+  apiKey: "AIzaSyBPj_AFAJTnl0_ffTNz3x6WeOPZcojAIcY",
   authDomain: "pruebasid-isabelagiraldo.firebaseapp.com",
   databaseURL: "https://pruebasid-isabelagiraldo-default-rtdb.firebaseio.com",
   projectId: "pruebasid-isabelagiraldo",
